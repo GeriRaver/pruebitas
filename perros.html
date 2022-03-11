@@ -1,0 +1,117 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="container">
+      <div id="opcionesContainer">
+        <button onclick="cambiarColorTitulo()">Cambiar color del titulo!</button>
+        <h1 id="titulo">Elegi tu perro</h1>
+        <ul id="options"></ul>
+      </div>
+      <div id="optionDetail" style="visibility: hidden;">
+        <h1 id="optionDetailTitulo" >La opción elegida es <span id="optionText"></span></h1>
+        <button onclick="volver()">Volver a Elegir</button>
+      </div>
+    </div>
+
+<script>
+const optionsContainer = document.getElementById('options');
+const textoContainer = document.getElementById('optionText');
+const optionsData = [
+  {
+    text: 'uno', 
+    value: 1
+  },
+  {
+    text: 'dos',
+    value: 2
+  },
+  {
+    text: 'tres',
+    value: 3
+  },
+  {
+    text: 'cuatro',
+    value: 4
+  },
+  {
+    text: 'cinco',
+    value: 5
+  },
+  {
+    text: 'seis',
+    value: 6
+  },
+  
+];
+const optionCreate = (text, value) => {
+  return '<li><button onclick="mostrarOpcion(\'' + text + '\')">' + text + '</button></li>';
+}
+
+function cargarOptions() {
+  for(let i = 0; i < optionsData.length; ) {
+    let option = optionsData[i];
+    optionsContainer.innerHTML += optionCreate(option.text, option.value);
+    i++;
+  }
+  // optionsData.map(function (option) {
+  //   optionsContainer.innerHTML += optionCreate(option.text, option.value);
+  // });
+}
+
+function mostrarOpcion(value) {
+  document.getElementById("opcionesContainer").style.display = 'none';
+  textoContainer.innerHTML = value;
+  document.getElementById("optionDetail").style.visibility = 'visible';
+}
+cargarOptions();
+
+function cambiarColorTitulo() {
+  document.getElementById('titulo').style.color = 'orange';
+}
+
+function volver() {
+  document.getElementById("opcionesContainer").style.display = "block";
+  document.getElementById("optionDetail").style.visibility = 'hidden';
+}
+
+// var perro = {
+//   nombre: 'coco',
+//   color: 'negro',
+//   cantidaPatas: 4,
+//   ladrar: () => {
+//     return 'guau guau';
+//   }
+// };
+// const gato = {
+//   nombre: 'popo',
+//   edad: 5
+// }
+
+// var animales = [
+//   perro,
+//   gato,
+//   {
+//     nombre: 'gege',
+//     edad: 58
+//   },
+//   gato
+// ];
+// console.log(animales[2].nombre);
+
+// console.log(gato.nombre);
+// console.log(gato.edad);
+// console.log(perro.ladrar());
+// const lista = [];
+// console.log(lista)
+// const palabra = 'gato';
+// console.log(palabra);
+// const numero = 1;
+// console.log(numero.toString());
+// console.log(numero.toString() + numero);
+
+</script>
+
+  </body>
+</html>
+

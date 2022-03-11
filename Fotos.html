@@ -1,0 +1,58 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1 onclick="cambia()" id="titulo" style="color: orange;">Fotos</h1>
+      <img id="foto" class="foto" />
+      <div class="contenedor-link">
+         <a href="#" id="aAnterior" onclick="anterior()">Anterior</a>
+         <a href="#" id="aSiguiente" onclick="siguiente()">Siguiente</a>
+      </div>
+    </div>
+    
+    <script src="fotos.js" ></script>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .contenedor {
+        width: 50%;
+        padding: 1em;
+        margin: 0 auto;
+        text-align: center;
+        background: hotpink;
+      }
+
+      .contenedor h1 {
+        margin: 0;
+      }
+
+      .foto {
+        width: 100%;
+      }
+
+      .contenedor-link {
+        display: flex;
+        width: 100%;
+      }
+
+      .contenedor-link a {
+        color: black;
+        display: block;
+        width: 50%;
+        text-decoration: none;
+        margin: 1em;
+        background: white;
+        padding: 1em;
+      }
+
+      .contenedor-link a:hover {
+        color: white;
+        background: black;
+      }
+    </style>
+  </body>
+</html>

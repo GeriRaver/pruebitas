@@ -1,0 +1,67 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div>
+      <h1>El oso...</h1>
+      <img id="oso" src="./images/osos/oso.jpeg" height="400" />
+      <div>
+        <input type="button" value="Comunista" onclick="cambiarOso('comunista')"/>
+        <input type="button" value="Capitalista" onclick="cambiarOso('capitalista')"/>
+        <input type="button" value="Normal" onclick="cambiarOso()"/>
+      </div>
+  </div>
+
+  <div>
+    <img id="perro" src="./images/perros/tonk.jpeg" height="400" />
+    <input type="button" value="Racista" onclick="cambiarPerro('racista')"/>
+    <input type="button" value="Comunista" onclick="cambiarPerro('comunista')"/>
+    <input type="button" value="Chico" onclick="cambiarPerro('chico')"/>
+    <input type="button" value="Feliz" onclick="cambiarPerro('feliz')"/>
+    <input type="button" value="Enojado" onclick="cambiarPerro('enojado')"/>
+  </div>
+<script>
+
+
+function cambiarOso(ideologia) {
+  const oso = document.getElementById('oso');
+  let imagen = 'oso.jpeg';
+  switch(ideologia) {
+    case 'comunista':
+      imagen = 'osoComunista.jpg' 
+      break;
+    case 'capitalista':
+      imagen = 'osoCapitalista.jpeg'
+      break;
+  }
+  oso.src = './images/osos/' + imagen;
+ }
+
+ function cambiarPerro(estado) {
+   const perro = document.getElementById('perro');
+   let imagen 
+   switch (estado) {
+     case 'racista':
+       imagen = 'racista.jpeg'
+       break;
+     case 'chico':
+       imagen = 'chico.jpeg'
+       break;
+     case 'comunista':
+       imagen = 'comunista.jpeg'
+       break;
+     case 'feliz':
+       imagen = 'feliz.jpeg'
+       break;
+     case 'enojado':
+       imagen = 'enojado.jpeg'
+       break;
+   }
+   perro.src = './images/perros/' + imagen
+ }
+
+</script>
+
+  </body>
+</html>
+

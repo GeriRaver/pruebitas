@@ -1,0 +1,107 @@
+<html>
+  <head>
+  </head>
+  <body>
+
+    <h1>aprendiendo js</h1>
+    <p>programación para la web</p>
+    
+    
+    <img id="gato" src="./images/gatoNom.jpg"/>
+    <input type="button" value="Volver comunista" onclick="gatos(true)"/>
+    <input type="button" value="Volver libre" onclick="gatos()"/>
+
+    <img id="oso" src="images/osos/oso.jpeg"/>
+    <input type="button" value="Volver comunista" onclick="cambiarOso('comunista')"/>
+    <input type="button" value="Volver capitalista" onclick="cambiarOso('capitalista')"/>
+    <input type="button" value="Volver" onclick="cambiarOso()"/>
+
+
+    <h1 id="saludo_grande">...</h1>
+    <div id="box1"></div>
+
+    <label>Pon tu nombre:</label>
+    <input id="nombre" type="text" value="">
+    <input type="button" value="Saludar!" onclick="saludar()" />
+    
+    <h1>Mis aniamles favoritos:</h1>
+    <ul>
+      <li>Gatos</li>
+      <li>Perros</li>
+      <li>Conejos</li>
+    </ul>
+    
+    <ul id="lista"></ul>
+    <!-- <input type="button" value="Cargar lista" onclick="cargar()"/> -->
+
+  <div class="contenedor">  
+    <div class="cajita">1</div>
+    <div class="cajita">2</div>
+    <div class="cajita">3</div>
+    <div class="cajita">4</div>
+    <div class="cajita">5</div>
+  </div>
+
+  <div class="contenedor">
+    <div class="cajita2">6</div>
+    <div class="cajita2">7</div>
+    <div class="cajita2">8</div>
+  </div>
+
+<script src="index.js" ></script>
+
+<style>
+
+body {
+  color:red;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: blue;
+  font-size: 3em;
+}
+
+#saludo_grande {
+  color: orange;
+}
+
+ul {
+  color:pink;
+}
+.contenedor {
+  display: block;
+  background: orange;
+  width: 100%;
+  height: 100px;
+  margin: 5px;
+  padding: 5px;
+}
+.cajita {
+  background: black;
+  height: 100px;
+  width: 100px;
+  margin: 0 2px 0 2px;
+  float: left;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.cajita2 {
+  background: red;
+  height: 100px;
+  width: 100px;
+  margin-right: 5px;
+  float: left;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+
+}
+
+
+</style>
+
+  </body>
+</html>
